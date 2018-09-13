@@ -5,6 +5,12 @@ class ToDoList extends Component{
     {
         var forEachItem = this.props.toDoArr.map(
             eachItem => {
+                if(eachItem.isDone===true){
+                    eachItem.isDone ="is done";
+                }else if(eachItem.isDone === false){
+                    eachItem.isDone = "is not done"
+                }
+
                 return(
                     <div>
                         <p>{eachItem.username} needs to {eachItem.todo}.</p>
